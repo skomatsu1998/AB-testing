@@ -1,15 +1,27 @@
-A/B Testing on Marketing Campaign Performance
-This project applies A/B testing to evaluate the effectiveness of two marketing campaigns — a Control campaign and a Test campaign — in influencing customer engagement and conversion. The analysis investigates statistically significant differences across key performance metrics.
+# A/B Testing on Marketing Campaign Performance
 
-Dataset Description
+This project applies **A/B testing** to evaluate the effectiveness of two marketing campaigns — a _Control_ campaign and a _Test_ campaign — in influencing customer engagement and conversion. The analysis investigates **statistically significant differences** across key performance metrics.
+
+## Dataset Description
+
 The dataset contains records from two distinct advertising campaigns, with the following features:
 
-Campaign Name: Identifies whether the row belongs to the Control or Test group
+- **Campaign Name**: Identifies whether the row belongs to the _Control_ or _Test_ group  
+- **Date**: Date of each record  
+- **Spend**: Amount spent on the campaign (AUD)  
+- **# of Impressions**: Number of times the ad was shown  
+- **Reach**: Number of unique users reached by the ad  
+- **# of Website Clicks**: Number of clicks to the website  
+- **# of Searches**: Number of users who searched the website  
+- **# of View Content**: Number of users who viewed product content  
+- **# of Add to Cart**: Number of users who added items to the cart  
+- **# of Purchase**: Number of completed purchases  
 
-Date: Date of each record
+## Objective
 
-Spend: Amount spent on the campaign (AUD)
+To assess whether the _Test_ campaign outperforms the _Control_ campaign in key marketing metrics, using **independent t-tests**.
 
+<<<<<<< HEAD
 "# of Impressions": Number of times the ad was shown
 
 Reach: Number of unique users reached by the ad
@@ -29,21 +41,36 @@ To assess whether the Test campaign outperforms the Control campaign in key mark
 
 Methodology
 Data Cleaning
+=======
+## Methodology
+>>>>>>> d3b806d (Changed the whole fonts, to be bold, underlined, italicised to make them easier to read)
 
+### 1. Data Cleaning
 Rows containing missing values were dropped due to the relatively small sample size, to preserve data integrity.
 
-Group Separation
+### 2. Group Separation
+Data was split into _Control_ and _Test_ groups for comparison.
 
-Data was split into Control and Test groups for comparison.
+### 3. Statistical Testing
+Welch’s t-tests were used to compare group means for each metric at a 95% confidence level (**α = 0.05**).
 
-Statistical Testing
+### 4. Interpretation
+Statistical significance was determined based on _p-values_ and _critical t-values_.
 
-Welch’s t-tests were used to compare group means for each metric at a 95% confidence level (α = 0.05).
+## Key Results
 
-Interpretation
+| Metric                 | T-Statistic | P-Value | Statistically Significant? |
+|------------------------|-------------|---------|-----------------------------|
+| # of Impressions       | 4.9161      | 0.0000  | Yes                         |
+| Reach                  | 5.3251      | 0.0000  | Yes                         |
+| # of Website Clicks    | -1.5761     | 0.1205  | No                          |
+| # of Searches          | -1.1244     | 0.2678  | No                          |
+| # of View Content      | 0.4740      | 0.6374  | No                          |
+| # of Add to Cart       | 4.2375      | 0.0001  | Yes                         |
 
-Statistical significance was determined based on p-values and critical t-values.
+## Conclusion
 
+<<<<<<< HEAD
 Key Results
 Metric	T-Statistic	P-Value	Statistically Significant?
 "# of Impressions"	4.9161	0.0000	Yes
@@ -52,24 +79,22 @@ Reach	5.3251	0.0000	Yes
 "# of Searches"	-1.1244	0.2678	No
 "# of View Content"	0.4740	0.6374	No
 "# of Add to Cart"	4.2375	0.0001	Yes
+=======
+The _Test_ campaign demonstrated greater effectiveness in increasing **reach**, **impressions**, and **add-to-cart behaviour** — all indicators of higher customer interest and intent.  
+However, it did not result in statistically significant improvements in engagement actions such as _website clicks_ or _on-site searches_.  
+Further **optimisation** of campaign messaging or website layout may help bridge this gap.
+>>>>>>> d3b806d (Changed the whole fonts, to be bold, underlined, italicised to make them easier to read)
 
-Conclusion
-The Test campaign demonstrated greater effectiveness in increasing reach, impressions, and add-to-cart behaviour — all indicators of higher customer interest and intent. However, it did not result in statistically significant improvements in engagement actions such as website clicks or on-site searches. Further optimisation of campaign messaging or website layout may help bridge this gap.
+## Requirements
 
-Requirements
-Python 3.8 or higher
+- Python 3.8 or higher  
+- pandas  
+- numpy  
+- scipy  
+- matplotlib _(optional, for visualisation)_
 
-pandas
+## How to Run
 
-numpy
-
-scipy
-
-matplotlib (optional, for visualisation)
-
-How to Run
-Clone this repository
-
-Open the Jupyter Notebook
-
-Run all cells in order to reproduce the analysis
+1. Clone this repository  
+2. Open the Jupyter Notebook  
+3. Run all cells in order to reproduce the analysis
