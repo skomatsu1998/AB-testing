@@ -21,7 +21,6 @@ The dataset contains records from two distinct advertising campaigns, with the f
 
 To assess whether the _Test_ campaign outperforms the _Control_ campaign in key marketing metrics, using **independent t-tests**.
 
-<<<<<<< HEAD
 "# of Impressions": Number of times the ad was shown
 
 Reach: Number of unique users reached by the ad
@@ -41,9 +40,6 @@ To assess whether the Test campaign outperforms the Control campaign in key mark
 
 Methodology
 Data Cleaning
-=======
-## Methodology
->>>>>>> d3b806d (Changed the whole fonts, to be bold, underlined, italicised to make them easier to read)
 
 ### 1. Data Cleaning
 Rows containing missing values were dropped due to the relatively small sample size, to preserve data integrity.
@@ -70,7 +66,6 @@ Statistical significance was determined based on _p-values_ and _critical t-valu
 
 ## Conclusion
 
-<<<<<<< HEAD
 Key Results
 Metric	T-Statistic	P-Value	Statistically Significant?
 "# of Impressions"	4.9161	0.0000	Yes
@@ -79,11 +74,6 @@ Reach	5.3251	0.0000	Yes
 "# of Searches"	-1.1244	0.2678	No
 "# of View Content"	0.4740	0.6374	No
 "# of Add to Cart"	4.2375	0.0001	Yes
-=======
-The _Test_ campaign demonstrated greater effectiveness in increasing **reach**, **impressions**, and **add-to-cart behaviour** — all indicators of higher customer interest and intent.  
-However, it did not result in statistically significant improvements in engagement actions such as _website clicks_ or _on-site searches_.  
-Further **optimisation** of campaign messaging or website layout may help bridge this gap.
->>>>>>> d3b806d (Changed the whole fonts, to be bold, underlined, italicised to make them easier to read)
 
 ## Requirements
 
